@@ -5,6 +5,13 @@ import { employees } from "./employees";
 import { handleChange } from "./handleChange";
 import Input from "./Input";
 
+interface InputProps {
+  day: string;
+  employee: string;
+  schedule: {};
+  handleChange: (day: string, employee: string, schedule: {}, setSchedule: React.Dispatch<React.SetStateAction<{}>>) => (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
 const Timetable = () => {
   const [schedule, setSchedule] = React.useState({});
 
